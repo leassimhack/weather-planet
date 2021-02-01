@@ -1,0 +1,37 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+bin/
+out/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Fortify ###
+*.fpr
+
+### Mac OSX ###
+.DS_Store
+
+src/main/resources/bootstrap.yml
+
+*.hprof
