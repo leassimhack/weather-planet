@@ -5,14 +5,13 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAttribute;
 
 @Entity
 @Table(name = "translationplanet")
 @Getter
 @Setter
 @Accessors(chain = true)
-public class TraslationPlanet {
+public class TranslationPlanet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,10 +21,7 @@ public class TraslationPlanet {
     private double radian_angles;
     private double value_x;
     private double value_y;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "planet_id")
-    private Planet planet;
-
+    private int planet_id;
 
 
 }

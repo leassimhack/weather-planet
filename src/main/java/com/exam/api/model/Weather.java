@@ -9,13 +9,12 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Planet {
+public class Weather {
 
-    private Integer id;
-    private String name;
-    private Integer velocityInDegreesPerDay;
+    private Integer day;
+    private String weatherType;
     private BigDecimal radiusKM;
     private BigDecimal distanceSunKm;
-
+    private Integer velocityInDegreesPerDay;
 
 }
