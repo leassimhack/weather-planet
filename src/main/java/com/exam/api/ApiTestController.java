@@ -1,5 +1,6 @@
 package com.exam.api;
 
+import com.exam.api.model.Forecast;
 import com.exam.api.model.Weather;
 import com.exam.service.WeatherService;
 import lombok.RequiredArgsConstructor;
@@ -12,15 +13,20 @@ public class ApiTestController implements ApiTestControllerInterface {
     private final WeatherService weatherService;
 
     @Override
-    public void createPlanets() {
+    public Forecast getWeatherDays(final String days) {
 
+        return weatherService.getForecastDay(days);
+
+    }
+
+    @Override
+    public void createJob() {
         weatherService.createWeather();
     }
 
     @Override
-    public Weather createPlanets(final String day) {
+    public Weather getWeatherDay(final String day) {
 
-        return null;
+        return weatherService.getWeatherDay(day);
     }
-
 }

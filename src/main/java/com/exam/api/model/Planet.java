@@ -4,18 +4,19 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.math.BigDecimal;
+import java.awt.geom.Point2D;
 
 @Getter
 @Setter
 @Accessors(chain = true)
 public class Planet {
 
-    private Integer id;
+    private int id;
+    private int velocity;
+    private int angleInDegrees;
+    private int distanceSunKm;
+    private double angleInRadians;
     private String name;
-    private Integer velocityInDegreesPerDay;
-    private BigDecimal radiusKM;
-    private BigDecimal distanceSunKm;
-
+    private Point2D position;
 
 }

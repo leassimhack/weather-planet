@@ -11,7 +11,7 @@ public class Constants {
     public static final int DISTANCE_SUN_FE = 500;
     public static final int DISTANCE_SUN_VU = 1000;
     public static final int DISTANCE_SUN_BE = 2000;
-    public static final int CALCULATE_DAYS = 3600;
+    public static final int CALCULATE_DAYS = 3650;
     public static final int ANGLE_360 = 360;
 
 }

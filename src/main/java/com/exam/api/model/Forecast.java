@@ -1,6 +1,5 @@
 package com.exam.api.model;
 
-import com.exam.enums.WeatherType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -10,14 +9,14 @@ import java.util.List;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Weather {
+public class Forecast {
 
-    private int day;
+    private Integer totalSunnyDays;
 
-    private WeatherType weatherType;
+    private Integer totalRainyDays;
 
-    private double precipitation;
+    private Integer totalDroughtDays;
 
-    private List<Planet> planets;
+    private List<Weather> forecasts;
 
 }
