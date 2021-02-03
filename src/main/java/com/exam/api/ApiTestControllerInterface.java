@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/solar-system/")
 public interface ApiTestControllerInterface {
 
-
     @RequestMapping(value = "/weather", method = RequestMethod.POST)
     void createPlanets();
 
