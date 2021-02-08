@@ -2,7 +2,7 @@ package com.exam.factory;
 
 import com.exam.connector.model.TranslationPlanet;
 import com.exam.service.model.Planet;
-import com.exam.service.model.Weather;
+import com.exam.connector.model.Weather;
 
 import java.awt.geom.Point2D;
 import java.util.ArrayList;

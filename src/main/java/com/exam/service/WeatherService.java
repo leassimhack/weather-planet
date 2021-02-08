@@ -3,11 +3,13 @@ package com.exam.service;
 
 import com.exam.api.model.*;
 import com.exam.connector.TranslationPlanetRepository;
+import com.exam.connector.ValidationRepository;
 import com.exam.connector.WeatherRepository;
 import com.exam.connector.model.TranslationPlanet;
+import com.exam.connector.model.ValidationJob;
 import com.exam.enums.WeatherType;
 import com.exam.service.model.PositionPlanets;
-import com.exam.service.model.Weather;
+import com.exam.connector.model.Weather;
 import com.exam.utils.Util;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -25,11 +27,30 @@ public class WeatherService {
 
     private final double[] kmMatch = {2000.0, 3000.0, 4000.0, 5000.0};
 
+
     private final TranslationPlanetRepository daoT;
     private final WeatherRepository daoW;
     private final Util util;
+    private final ValidationRepository daoV;
 
     public void createWeather() {
+
+        List<ValidationJob> finalValidationJobs = new ArrayList<>();
+
+        daoV.findAll().forEach(finalValidationJobs::add);
+
+        Optional.of(finalValidationJobs)
+            .filter(validationJobs -> !validationJobs.isEmpty())
+            .orElse(Collections.emptyList())
+            .stream()
+            .filter(validationJob -> validationJob.getFlag().equalsIgnoreCase(Boolean.TRUE.toString()))
+            .findFirst()
+            .ifPresent(validationJob -> {
+                throw new IllegalArgumentException("The job has already been executed");
+            });
+
+
+        daoV.save(new ValidationJob().setFlag(Boolean.TRUE.toString()));
 
         createTranslationPlanets();
 

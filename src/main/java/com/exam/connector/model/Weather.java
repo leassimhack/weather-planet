@@ -1,4 +1,4 @@
-package com.exam.service.model;
+package com.exam.connector.model;
 
 import lombok.Getter;
 import lombok.Setter;
