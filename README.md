@@ -1,10 +1,8 @@
 ### La implementación del ejercicio  se encuentra despliegada en Heroku en la siguientes URL son los recursos expuestos por el API
 
 
-GET /api/weather/{day}
-https://solar-system-test.herokuapp.com/api/weather/91
-GET  /api/forecast/{days}
-https://solar-system-test.herokuapp.com/api/forecast/500
+- GET /api/weather/{day} https://solar-system-test.herokuapp.com/api/weather/91
+- GET /api/forecast/{days} https://solar-system-test.herokuapp.com/api/forecast/500
 
 ### Ejercicio:
 
