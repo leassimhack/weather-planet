@@ -1,4 +1,4 @@
-package com.exam.connector.model;
+package com.exam.service.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -29,5 +29,6 @@ public class Weather {
     private double y3;
     private double sum;
     private String weather;
+    private double precipitation;
 
 }

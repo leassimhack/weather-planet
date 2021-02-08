@@ -1,18 +1,15 @@
 package com.exam.api.model;
 
+import com.exam.enums.WeatherType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.util.List;
-
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Forecast {
+public class WeatherMain {
 
-    private  List<WeatherDays> weathers;
-
-    private List<WeatherResponse> forecasts;
+    private WeatherType main;
 
 }

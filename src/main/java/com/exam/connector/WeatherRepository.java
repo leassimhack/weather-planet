@@ -1,6 +1,6 @@
 package com.exam.connector;
 
-import com.exam.connector.model.Weather;
+import com.exam.service.model.Weather;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

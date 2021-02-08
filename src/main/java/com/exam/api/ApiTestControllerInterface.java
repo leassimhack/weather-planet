@@ -1,7 +1,7 @@
 package com.exam.api;
 
 import com.exam.api.model.Forecast;
-import com.exam.api.model.Weather;
+import com.exam.api.model.WeatherResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +16,7 @@ public interface ApiTestControllerInterface {
     void createJob();
 
     @RequestMapping(value = "/weather/{day}", method = RequestMethod.GET)
-    Weather getWeatherDay(@PathVariable final String day);
+    WeatherResponse getWeatherDay(@PathVariable final String day);
 
 
 }
