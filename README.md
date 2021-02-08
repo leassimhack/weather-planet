@@ -1,6 +1,10 @@
-### La implementación del ejercicio descrito más abajo se encuentra deployada en Heroku en la siguiente URL:
+### La implementación del ejercicio  se encuentra despliegada en Heroku en la siguientes URL son los recursos expuestos por el API
 
-https://young-springs-94127.herokuapp.com/swagger-ui.html
+
+GET /api/weather/{day}
+https://solar-system-test.herokuapp.com/api/weather/91
+GET  /api/forecast/{days}
+https://solar-system-test.herokuapp.com/api/forecast/500
 
 ### Ejercicio:
 
